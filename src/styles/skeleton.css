@@ -1,0 +1,92 @@
+/*
+ * Variables
+ */
+
+ :root {
+   --card-padding: 15px;
+   --card-height: 360px;
+   --card-skeleton: linear-gradient(white var(--card-height), transparent 0);
+
+   --figure-height: 210px;
+   --figure-width: 100%;
+   --figure-position: 0 0;
+   --figure-skeleton: linear-gradient(lightgrey var(--figure-height), transparent 0);
+
+   --rating-height: 20px;
+   --rating-width: 140px;
+   --rating-position: var(--card-padding) 220px;
+   --rating-skeleton: linear-gradient(lightgrey var(--rating-height), transparent 0);
+
+   --title-height: 30px;
+   --title-width: 140px;
+   --title-position: var(--card-padding) 250px;
+   --title-skeleton: linear-gradient(lightgrey var(--rating-height), transparent 0);
+
+   --description-height: 55px;
+   --description-width: 260px;
+   --description-position: var(--card-padding) 290px;
+   --description-skeleton: linear-gradient(lightgrey var(--description-height), transparent 0);
+
+   --blur-width: 200px;
+   --blur-size: var(--blur-width) var(--card-height);
+ }
+
+/*
+ * Skeleton Card
+ */
+
+.skeleton {
+  width: auto;
+  height: var(--card-height);
+  margin: 5%;
+  background-repeat: no-repeat;
+  background-image: 
+    /* animation blur */
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, .8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    /* description */
+    var(--description-skeleton),
+    /* title */
+    var(--title-skeleton),
+    /* rating */
+    var(--rating-skeleton),
+    /* figure */
+    var(--figure-skeleton),
+    /* card */
+    var(--card-skeleton);
+  background-size:
+    var(--blur-size),
+    var(--description-width) var(--description-height),
+    var(--title-width) var(--title-height),
+    var(--rating-width) var(--rating-height),
+    var(--figure-width) var(--figure-height),
+    100% 100%;
+  background-position:
+    -150% 0,
+    var(--description-position),
+    var(--title-position),
+    var(--rating-position),
+    var(--figure-position),
+    0 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 0 10px 45px rgba(0,0,0, .1);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position: 
+      350% 0,
+      var(--description-position),
+      var(--title-position),
+      var(--rating-position),
+      var(--figure-position),
+      0 0
+    ;
+  }
+}

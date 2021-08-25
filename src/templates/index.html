@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simple web that can help you to find a restaurant near your places.">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://restaurant-api.dicoding.dev">
+  <title>Food Hunter</title>
+</head>
+<body>
+  <a id="skipToContent" href="#mainContent">Skip to Content</a>
+  <header class="app-bar">
+      <div class="app-bar--menu">
+          <button id="openDrawerButton" type="button" aria-label="open a drawer">☰</button>
+      </div>
+      <nav id="drawer" class="app-bar--navigation">
+        <div class="app-bar--brand">
+            <h1>Food Hunter</h1>
+        </div>
+        <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/favorite">Favorite</a></li>
+            <li><a href="https://github.com/bpkcongli">About Us</a></li>
+        </ul>
+    </nav>
+  </header>
+  <div class="hero hidden">
+      <div class="hero-inner">
+          <div class="hero-title">Bingung cari rekomendasi tempat makan yang asik?</div>
+          <div class="hero-tagline">Mulai dari angkringan sampai restoran mewah bisa kamu temukan dengan mudah melalui gawaimu.</div>
+      </div>
+  </div>
+  <main id="mainContent"></main>
+  <div class="modal hidden">
+    <div class="modal-content"></div>
+  </div>
+  <footer class="hidden">Copyright © 2021 - Food Hunter</footer>
+</body>
+</html>

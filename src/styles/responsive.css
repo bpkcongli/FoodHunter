@@ -1,0 +1,310 @@
+@media screen and (min-width: 360px) {
+  .restaurant-item {
+    margin: 5%;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-tagline {
+    font-size: 1.2em;
+  }
+
+  main {
+    height: 2650px;
+  }
+
+  .content-title {
+    font-size: 1.15em;
+  }
+
+  .restaurants {
+    margin: 0 auto;
+    max-width: 420px;
+  }
+
+  .restaurant-info {
+    font-size: 1em;
+    padding: 20px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .content {
+    padding: 8%;
+  }
+
+  .content-title {
+    margin: 3% 3% 8%;
+  }
+
+  .not-found-container img {
+    width: 60%;
+  }
+
+  .not-found-container p {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/hero-image-large.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .hero-title {
+    font-size: 2.25em;
+  }
+
+  .hero-tagline {
+    font-size: 1.5em;
+  }
+
+  .content {
+    padding: 5%;
+  }
+
+  footer {
+    font-size: 1em;
+  }
+
+  .not-found-container {
+    padding: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .app-bar--menu {
+    display: none;
+  }
+
+  #drawer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    margin: 0;
+    min-height: 0;
+    padding: 0 5%;
+    position: relative;
+    transform: none;
+    transition: none;
+  }
+
+  .app-bar--navigation ul {
+    flex-direction: row;
+  }
+
+  .app-bar--navigation li {
+    border: none;
+  }
+
+  .app-bar--brand {
+    align-items: center;
+    color: white;
+    display: flex;
+    padding-left: 5%;
+  }
+
+  .hero-title, .hero-tagline {
+    max-width: 700px;
+  }
+
+  main {
+    height: 1500px;
+  }
+
+  .content {
+    padding: 8%;
+  }
+
+  .content-title {
+    font-size: 1.3em;
+    margin: 3% 3% 6%;
+  }
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+  }
+
+  .restaurant-item {
+    margin: 3%;
+  }
+
+  .restaurant-info {
+    padding: 15px;
+  }
+
+  footer {
+    padding: 3%;
+  }
+
+  .not-found-container img {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  main {
+    height: auto;
+  }
+
+  .content {
+    padding: 5% 8%;
+  }
+
+  .restaurants {
+    max-width: 810px;
+  }
+
+  #showMoreRestaurants button {
+    font-size: 1.2em;
+  }
+
+  .not-found-container {
+    padding: 60px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .restaurant-info {
+    padding: 20px;
+  }
+
+  #showMoreRestaurants {
+    margin: 3%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .app-bar--navigation ul {
+    justify-content: flex-end;
+  }
+
+  .app-bar--navigation li {
+    flex-basis: 25%;
+  }
+
+  .content {
+    padding: 5%;
+  }
+
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+  }
+
+  .restaurant {
+    padding: 0 5%;
+  }
+
+  .restaurant-info {
+    padding: 15px;
+  }
+
+  footer {
+    padding: 30.4px;
+  }
+
+  .not-found-container img {
+    width: 40%;
+  }
+
+  .not-found-container p {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .app-bar--navigation li {
+    max-width: 160px;
+  }
+
+  .app-bar--navigation li a {
+    font-size: 1.5em;
+  }
+
+  .hero {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/hero-image.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 10%;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+  }
+
+  .hero-tagline {
+    font-size: 1.75em;
+  }
+
+  .content {
+    padding: 60px;
+  }
+
+  .content-title {
+    font-size: 1.4em;
+    margin: 36px 36px 72px;
+  }
+
+  .restaurants {
+    max-width: 1240px;
+  }
+
+  .restaurant {
+    margin: auto;
+    max-width: 1000px;
+    padding: 0;
+  }
+
+  .restaurant-item {
+    margin: 5%;
+  }
+
+  .restaurant-info {
+    font-size: 1.05em;
+    padding: 20px;
+  }
+
+  .restaurant-image {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .restaurant-image img {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  #showMoreRestaurants button {
+    width: 300px;
+  }
+
+  .not-found-container img {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+  }
+
+  .not-found-container img {
+    width: 25%;
+  }
+
+  .not-found-container p {
+    font-size: 1.4em;
+  }
+}

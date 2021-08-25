@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+* Header, Off Canvas Menu Button, Skip to Content
+*/
+
+a#skipToContent {
+  background-color: #3282b8;
+  bottom: -44px;
+  color: black;
+  font-weight: bold;
+  height: 44px;
+  padding: 12px;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+}
+
+a#skipToContent:focus {
+ bottom: 0;
+ z-index: 999;
+}
+
+.app-bar {
+  background-color: #1b262c;
+  height: 10vh;
+  min-height: 50px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.app-bar--menu {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.app-bar--menu button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2em;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/*
+* Navigation Drawer
+*/
+
+#drawer {
+  background-color: #1b262c;
+  height: 25%;
+  margin: 10px 0 0 -10px;
+  min-height: 150px;
+  position: absolute;
+  transform: translate(0, -200%);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+#drawer.open {
+  transform: translate(0, 0);
+}
+
+.app-bar--brand {
+  display: none;
+}
+
+.app-bar--navigation ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style-type: none;
+}
+
+.app-bar--navigation li {
+  align-items: center;
+  border-top: 1px solid #101619;
+  display: flex;
+  flex-basis: 33%;
+  justify-content: center;
+}
+
+.app-bar--navigation li:hover {
+  font-weight: bold;
+}
+
+.app-bar--navigation li a {
+  color: white;
+  font-size: 1.25em;
+  min-height: 44px;
+  min-width: 44px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.app-bar--navigation i {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.25em;
+}
+
+/*
+* Hero
+*/
+
+.hero {
+  background: #101619;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/hero-image-small.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 90vh;
+  padding: 5%;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.hero-tagline {
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+/*
+ * Loader
+ */
+
+.loader-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*
+ * Modal
+ */
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  left: 0;
+  padding-top: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #cdcdcd;
+  border: 1px solid #888;
+  border-radius: 3px;
+  font-size: 1em;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/*
+* Main Content
+*/
+
+main {
+  height: 2500px;
+  min-height: 82vh;
+  width: 100%;
+}
+
+.content {
+  padding: 5%;
+  width: 100%;
+}
+
+.content p {
+  text-align: center;
+}
+
+.content-title {
+  margin: 5% 5% 10%;
+  text-align: center;
+}
+
+.restaurants {
+  width: 100%;
+}
+
+.restaurant {
+  min-height: 650px;
+  width: 100%;
+}
+
+.restaurant-item {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 5% 0;
+}
+
+.restaurant-info {
+  font-size: 0.9em;
+  padding: 15px;
+}
+
+.restaurant-image {
+  border-radius: 5px 5px 0 0;
+  background-color: #999;
+  height: 210px;
+  min-height: 210px;
+  position: relative;
+  width: 100%;
+}
+
+.restaurant-image img {
+  border-radius: 5px 5px 0 0;
+  height: 100%;
+  min-height: 210px;
+  object-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.restaurant-city {
+  background-color: #1b262c;
+  border-radius: 5px;
+  color: white;
+  margin: 2%;
+  padding: 2%;
+  position: absolute;
+  top: 0;
+}
+
+.restaurant-rating {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.restaurant-rating-star {
+  margin-right: 10px;
+}
+
+.fa {
+  color: #f8ce0b;
+  font-display: block;
+}
+
+/*
+ * Show More Restaurants Button
+ */
+
+#showMoreRestaurants {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5%;
+}
+
+#showMoreRestaurants button {
+  border: 1px solid #1b262c;
+  background: none;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 200px;
+}
+
+/*
+ * Footer
+ */
+
+footer {
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid #1b262c;
+  color: #1b262c;
+  display: flex;
+  font-size: 0.8em;
+  font-weight: bold;
+  height: 8vh;
+  justify-content: center;
+  text-align: center;
+}
+
+/*
+ * Not Found Page
+ */
+
+.not-found-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 20px;
+}
+
+.not-found-container img {
+  width: 75%;
+}
+
+.not-found-container p {
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.not-found-container p a {
+  color: #1b262c;
+  font-weight: bold;
+}
