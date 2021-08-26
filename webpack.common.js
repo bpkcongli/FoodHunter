@@ -6,9 +6,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const {InjectManifest} = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozJpeg = require('imagemin-mozjpeg');
-/* I commented this so that the bundle analyzer doesn't intercept build image process
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-*/
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
 module.exports = {
@@ -145,8 +143,6 @@ module.exports = {
         },
       ],
     }),
-    /* I commented this too
-    new BundleAnalyzerPlugin(),
-    */
+    // new BundleAnalyzerPlugin(),
   ],
 };

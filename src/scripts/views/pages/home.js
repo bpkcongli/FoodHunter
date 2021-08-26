@@ -60,7 +60,11 @@ class Home {
     this._restaurants.slice(0, 6).forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
-    content.innerHTML += '<div id="showMoreRestaurants"><button type="button">Show More</button></div>';
+    content.innerHTML += `
+      <div id="showMoreRestaurants">
+        <button type="button" aria-label="show more restaurants">Show More</button>
+      </div>
+    `;
     document.querySelector('#showMoreRestaurants button').addEventListener('click', () => {
       this._appendRestaurantItems();
     });

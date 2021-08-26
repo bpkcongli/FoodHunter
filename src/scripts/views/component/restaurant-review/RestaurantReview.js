@@ -72,6 +72,7 @@ class RestaurantReview extends LitElement {
       }
 
       #reviewerNameInput {
+        min-height: 44px;
         padding: 5px 0;
       }
 
@@ -79,6 +80,7 @@ class RestaurantReview extends LitElement {
         border-radius: 3px;
         border: 1px solid grey;
         height: 75px;
+        margin-top: 10px;
         padding: 5px;
         resize: none;
       }

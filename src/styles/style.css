@@ -322,6 +322,7 @@ main {
   border: 1px solid #1b262c;
   background: none;
   margin-top: 10px;
+  min-height: 44px;
   padding: 10px;
   font-size: 1.1em;
   font-weight: bold;

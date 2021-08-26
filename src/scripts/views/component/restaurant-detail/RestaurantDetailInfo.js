@@ -1,6 +1,5 @@
 import {LitElement, html, css} from 'lit-element';
 import './RestaurantDetailCategory';
-import './RestaurantDetailLocation';
 import './RestaurantDetailDescription';
 import './RestaurantDetailMenus';
 import LikeButtonInitiator from '../../../utils/like-button-initiator';
@@ -70,8 +69,22 @@ class RestaurantDetailInfo extends LitElement {
         font-display: block;
       }
 
+      .restaurant-detail-location {
+        margin: 10px 0;
+        font-size: 0.85em;
+      }
+
+      .restaurant-detail-location .fa {
+        font-size: 1.1em;
+        margin-right: 10px;
+      }
+
       @media screen and (min-width: 576px) {
         .restaurant-detail-name {
+          font-size: 0.9em;
+        }
+
+        .restaurant-detail-location {
           font-size: 0.9em;
         }
       }
@@ -92,11 +105,19 @@ class RestaurantDetailInfo extends LitElement {
         .restaurant-detail-name {
           font-size: 1em;
         }
+
+        .restaurant-detail-location {
+          font-size: 0.95em;
+        }
       }
 
       @media screen and (min-width: 900px) {
         .restaurant-detail-name {
           font-size: 1.1em;
+        }
+
+        .restaurant-detail-location {
+          font-size: 1em;
         }
 
         button {
@@ -108,11 +129,19 @@ class RestaurantDetailInfo extends LitElement {
         .restaurant-detail-name {
           font-size: 1.2em;
         }
+
+        .restaurant-detail-location {
+          font-size: 1.1em;
+        }
       }
 
       @media screen and (min-width: 1280px) {
         .restaurant-detail-name {
           font-size: 1.3em;
+        }
+
+        .restaurant-detail-location {
+          font-size: 1.15em;
         }
 
         button {
@@ -174,8 +203,9 @@ class RestaurantDetailInfo extends LitElement {
           </div>
           <span>${rating}</span>
         </div>
-        <restaurant-detail-location location="${address}">
-        </restaurant-detail-location>
+        <div class="restaurant-detail-location">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>${address}
+        </div>
         <restaurant-detail-description description="${description}">
         </restaurant-detail-description>
         <restaurant-detail-menus 
